@@ -4,7 +4,7 @@
   "released_at": "2026-09-13",
   "summary": {
     "title": "CartCo E-Commerce Checkout Threat Model",
-    "owner": "James Aliviado",
+    "owner": "Krystel Erich Adlawan",
     "description": "Threat model for the CartCo e-commerce checkout system, focusing on data flows, trust boundaries, and security threats using the STRIDE methodology.",
     "id": 0
   },
