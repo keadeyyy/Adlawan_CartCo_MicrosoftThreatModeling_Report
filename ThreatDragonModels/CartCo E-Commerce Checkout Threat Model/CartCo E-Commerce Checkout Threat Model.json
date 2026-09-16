@@ -1,1 +1,3334 @@
-
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-09-13",
+  "summary": {
+    "title": "CartCo E-Commerce Checkout Threat Model",
+    "owner": "James Aliviado",
+    "description": "Threat model for the CartCo e-commerce checkout system, focusing on data flows, trust boundaries, and security threats using the STRIDE methodology.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "CartCo Checkout DFD",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 5\nApplication Tier <-> Data Tier",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 5\nApplication Tier <-> Data Tier"
+            ],
+            "id": "4a1f0f76-e749-4d8b-8488-d3a4ff07c56a",
+            "source": {
+              "x": 30,
+              "y": 730
+            },
+            "target": {
+              "x": 1720,
+              "y": 730
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 3\nApplication Tier <-> Email Gateway",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 3\nApplication Tier <-> Email Gateway"
+            ],
+            "id": "79031dd5-1596-4f0e-974c-e469b26c720c",
+            "source": {
+              "x": 680,
+              "y": 520
+            },
+            "target": {
+              "x": 1010,
+              "y": 520
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 2\nApplication Tier <-> Payment Gateway",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 2\nApplication Tier <-> Payment Gateway"
+            ],
+            "id": "19b7dbb4-1abe-4b31-a78f-bf0c2dd91c04",
+            "source": {
+              "x": 1020,
+              "y": 520
+            },
+            "target": {
+              "x": 1380,
+              "y": 520
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 1\nPublic Internet <-> CartCo Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 1\nPublic Internet <-> CartCo Application"
+            ],
+            "id": "0dfd4c81-b31b-4aca-9103-51ab220533b6",
+            "source": {
+              "x": 31,
+              "y": 196
+            },
+            "target": {
+              "x": 1670,
+              "y": 190
+            }
+          },
+          {
+            "position": {
+              "x": 166.24999999999972,
+              "y": 70.00000000000038
+            },
+            "size": {
+              "width": 110,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f4cd78a7-7070-433b-a3d7-90ffa0f6b7cb"
+                },
+                {
+                  "group": "right",
+                  "id": "0658aefd-ce60-4bf5-aeb5-123351ed7b7c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7f2ead96-b354-40ec-b17f-4beab7c53904"
+                },
+                {
+                  "group": "left",
+                  "id": "fe697c78-fac8-4b67-90a7-ff9fd39c6507"
+                }
+              ]
+            },
+            "id": "8e3294fa-4b75-433b-b5e2-895b1a9596f9",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Customer",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "bd6e669c-6a64-4458-8a90-9ea6f37a189c",
+                  "title": "Customer Credential Stuffing & Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An external attacker uses compromised password lists to impersonate a Customer actor, gaining access to saved cart items, address details, and payment options.",
+                  "mitigation": "Enforce Multi-Factor Authentication (MFA), lockout policies, and CAPTCHA challenges after repeated failed login attempts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 191.24999999999972,
+              "y": 256
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Authenticate User"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+                },
+                {
+                  "group": "right",
+                  "id": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "55f4e268-d2cf-4be0-a9c0-c2e22f560006"
+                }
+              ]
+            },
+            "id": "dd2f0e4e-9f60-4d8b-ab77-aa9802db38d9",
+            "data": {
+              "type": "tm.Process",
+              "name": "Authenticate User",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "29604153-69e8-4223-9516-04dca2414897",
+                  "title": "Brute-Force Password Guessing & Abuse",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Automated bots flood the Authenticate User process with credential pairs to guess valid user credentials and hijack active accounts.",
+                  "mitigation": "Enforce IP rate limiting, implement account lockout rules after 5 failed attempts, and use Argon2id password hashing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "8.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 56.249999999999716,
+              "y": 838
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User Accounts DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+                },
+                {
+                  "group": "right",
+                  "id": "f5de54fc-6821-4bef-8a1f-17956a0d862d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "cddc7b1e-1b2c-47a3-920d-d51ee65277a0"
+                },
+                {
+                  "group": "left",
+                  "id": "2072b1cc-e14a-48c7-82c5-794cb350d632"
+                }
+              ]
+            },
+            "id": "bbdd5f72-bc73-412b-ba69-da9004d3a8eb",
+            "data": {
+              "type": "tm.Store",
+              "name": "User Accounts DB",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "53e2bc0d-7e3e-4fa4-ad97-472ce0cbeb2e",
+                  "title": "PII & Credential Exfiltration at Rest",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Direct extraction or unauthorized access to the User Accounts DB exposes user password hashes, email addresses, and personal profile information.",
+                  "mitigation": "Implement AES-256 database column encryption, enforce salted Argon2id password hashing, and restrict DB access to internal subnets.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "9.0"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 340,
+              "y": 838
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Session Store"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 5,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+                },
+                {
+                  "group": "right",
+                  "id": "f5de54fc-6821-4bef-8a1f-17956a0d862d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "cddc7b1e-1b2c-47a3-920d-d51ee65277a0"
+                },
+                {
+                  "group": "left",
+                  "id": "2072b1cc-e14a-48c7-82c5-794cb350d632"
+                }
+              ]
+            },
+            "id": "60a54fa5-af3a-4171-883c-11ba02715a7a",
+            "data": {
+              "type": "tm.Store",
+              "name": "Session Store",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "32fc89d4-d5bc-4dc6-9d17-2b4ae2ad4052",
+                  "title": "Session Cache Poisoning & Hijacking",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Unauthenticated access to the in-memory Session Store allows attackers to overwrite active session keys and hijack authenticated user sessions.",
+                  "mitigation": "Enable TLS authentication and passwords for Redis/Memcached instances and bind session tokens to client browser fingerprints.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8.0"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Credentials",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "09c6acbc-983d-4f8b-ad17-0c6880f28dda",
+                  "title": "Credential Interception in Transit (TB1)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Username and password payloads sent across Trust Boundary 1 are intercepted over unencrypted HTTP connections.",
+                  "mitigation": "Mandate TLS 1.3 across all entry endpoints and enforce HTTP Strict Transport Security (HSTS).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Credentials"
+            ],
+            "id": "481c4291-c4a7-4a81-92a4-d8d129b3e953",
+            "source": {
+              "cell": "8e3294fa-4b75-433b-b5e2-895b1a9596f9",
+              "port": "7f2ead96-b354-40ec-b17f-4beab7c53904"
+            },
+            "target": {
+              "cell": "dd2f0e4e-9f60-4d8b-ab77-aa9802db38d9",
+              "port": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Account Lookup",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "89072299-7add-41c9-ac7c-491767db70c3",
+                  "title": "User Enumeration via Account Queries",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Attacker probes the query path to check if targeted email addresses exist in the User Accounts database based on response timing.",
+                  "mitigation": "Standardize query execution time and return generic error messages for all failed lookups.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "6.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Account Lookup"
+            ],
+            "id": "b0617ba1-dac9-4cee-a671-e0d371a330ff",
+            "source": {
+              "cell": "dd2f0e4e-9f60-4d8b-ab77-aa9802db38d9",
+              "port": "55f4e268-d2cf-4be0-a9c0-c2e22f560006"
+            },
+            "target": {
+              "cell": "bbdd5f72-bc73-412b-ba69-da9004d3a8eb",
+              "port": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+            },
+            "vertices": [
+              {
+                "x": 70,
+                "y": 580
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Session validation",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "cd6f9964-c1af-46d1-b701-d468045514f4",
+                  "title": "Replay of Hijacked Session Tokens",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepted session tokens sent between Authenticate User and Session Store are replayed to bypass login.",
+                  "mitigation": "Implement short session lifetimes, single-use nonce checks, and token rotation upon activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "7.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Session validation"
+            ],
+            "id": "0c9cff29-6c6e-435b-b6b6-0cf3a7be1e68",
+            "source": {
+              "cell": "60a54fa5-af3a-4171-883c-11ba02715a7a",
+              "port": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+            },
+            "target": {
+              "cell": "dd2f0e4e-9f60-4d8b-ab77-aa9802db38d9",
+              "port": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 530
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Shipping address + cart contents",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7a500d16-8786-45af-8385-9be7ba21eb50",
+                  "title": "Malicious Payload Injection in Order Data (TB1)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Address or cart fields sent across Trust Boundary 1 contain injected XSS or SQL payloads targeting internal fulfillment systems.",
+                  "mitigation": "Validate input using strict server-side allow-lists and sanitize all input string parameters.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "7.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Shipping address + cart contents"
+            ],
+            "id": "a1ee2887-1878-4968-a4d4-e1eaf8aa43c5",
+            "source": {
+              "cell": "8e3294fa-4b75-433b-b5e2-895b1a9596f9",
+              "port": "0658aefd-ce60-4bf5-aeb5-123351ed7b7c"
+            },
+            "target": {
+              "cell": "728bc4e3-e428-4868-9d49-98c4b38d62e6",
+              "port": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Inventory Update",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "108b962a-d531-4dc6-92e8-dbf2ab0a3a30",
+                  "title": "Tampering with Internal Stock Commands",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Internal microservice communications modifying stock levels are intercepted and altered to manipulate item availability.",
+                  "mitigation": "Authenticate inter-service calls using signed JWT tokens or mTLS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "5.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Inventory Update"
+            ],
+            "id": "675e99f2-6b15-4eb7-9dc4-ced6a674965b",
+            "source": {
+              "cell": "728bc4e3-e428-4868-9d49-98c4b38d62e6",
+              "port": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+            },
+            "target": {
+              "cell": "b417b21b-c192-4ece-b341-7b66413b158c",
+              "port": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Decrement Stock",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "5198622c-4138-4fe4-aa4b-27d1160f91c2",
+                  "title": "Unauthorized Direct Inventory Decrement (TB5)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attacker bypasses the Checkout Service to execute stock reduction commands directly against the database across Trust Boundary 5.",
+                  "mitigation": "Enforce database firewalls to restrict write queries strictly to the Update Inventory service identity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "6.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Decrement Stock"
+            ],
+            "id": "7bc71e79-891c-4475-9e94-925afec9691f",
+            "source": {
+              "cell": "b417b21b-c192-4ece-b341-7b66413b158c",
+              "port": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+            },
+            "target": {
+              "cell": "63578ada-0686-4bb1-9934-8eb340dca1ed",
+              "port": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order confirmation data",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2f98aab5-0a52-4241-b286-5aedc211e470",
+                  "title": "Exposure of Customer PII in Order Payload",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Order summary details passed from Checkout Service to Send Order Confirmation expose sensitive customer information.",
+                  "mitigation": "Minimize payload fields to contain only essential reference IDs instead of raw PII.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "6.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Order confirmation data"
+            ],
+            "id": "ca286764-b31e-4e45-a509-74ab08086e5d",
+            "source": {
+              "cell": "728bc4e3-e428-4868-9d49-98c4b38d62e6",
+              "port": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+            },
+            "target": {
+              "cell": "5c5c1d92-161b-465a-92f1-603287362aa7",
+              "port": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Email request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "8535cb03-c3db-4820-abaa-5b962fbc7aac",
+                  "title": "Outbound Email Payload Interception (TB3)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Notification data sent across Trust Boundary 3 to the Email Service Provider is eavesdropped on public network paths.",
+                  "mitigation": "Enforce HTTPS/TLS 1.3 for all outbound REST API webhook calls.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "6.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Email request"
+            ],
+            "id": "01ba481a-a578-4a70-bcfb-92f44444cea1",
+            "source": {
+              "cell": "5c5c1d92-161b-465a-92f1-603287362aa7",
+              "port": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+            },
+            "target": {
+              "cell": "b400fc14-7c01-41c3-bca0-286a80b7b936",
+              "port": "f4cd78a7-7070-433b-a3d7-90ffa0f6b7cb"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Change request/Refund request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "cfef8078-eb2c-43b3-8844-acfd5d8544f6",
+                  "title": "Gateway Payment Payload Tampering (TB2)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment modification requests sent across Trust Boundary 2 to the Payment Gateway are altered in transit to divert funds.",
+                  "mitigation": "Secure connection with TLS 1.3 and cryptographically sign API requests using private API keys.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": "8.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Change request/Refund request"
+            ],
+            "id": "c0f1dec6-2774-49f4-99e8-223be8f969c8",
+            "source": {
+              "cell": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+              "port": "629c0e2f-b359-46bd-a4bc-7a044bc84a3a"
+            },
+            "target": {
+              "cell": "474b60b8-45ca-4258-bd22-e6e6b3b9fb26",
+              "port": "d1d847a4-b72c-4c8e-9ea1-7c47aec491d4"
+            },
+            "vertices": [
+              {
+                "x": 1048.75,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment result/ Refund result",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "43a805bd-db2c-409c-89c9-f260bfe9814e",
+                  "title": "Replay of Payment Gateway Callbacks (TB2)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment gateway confirmation payloads sent across Trust Boundary 2 are captured and replayed to grant free orders.",
+                  "mitigation": "Require unique idempotency tokens and verify signatures on every webhook callback.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": "8.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment result/ Refund result"
+            ],
+            "id": "fac5c580-4bd9-4035-9f93-bda274edbe70",
+            "source": {
+              "cell": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+              "port": "629c0e2f-b359-46bd-a4bc-7a044bc84a3a"
+            },
+            "target": {
+              "cell": "474b60b8-45ca-4258-bd22-e6e6b3b9fb26",
+              "port": "8dd64592-3c62-4d10-82e9-24f9c083cf3d"
+            },
+            "vertices": [
+              {
+                "x": 1190,
+                "y": 360
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment status/Refund status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "44fbc79b-5a3c-41bc-a09d-9ee3fdf88549",
+                  "title": "Unauthorized Modification of Order Status (TB5)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment updates passing across Trust Boundary 5 are modified before writing to the Orders DB, falsifying transaction history.",
+                  "mitigation": "Enforce strict DB access control and audit log generation for state modifications.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": "8.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment status/Refund status"
+            ],
+            "id": "9135009f-56b0-40d4-85ef-69dba591c6b2",
+            "source": {
+              "cell": "1ca7cff4-2a89-495e-b8c9-e84582664f86",
+              "port": "11421a1b-6f97-4774-8e73-0be75d08f7c7"
+            },
+            "target": {
+              "cell": "474b60b8-45ca-4258-bd22-e6e6b3b9fb26",
+              "port": "8dd64592-3c62-4d10-82e9-24f9c083cf3d"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refund request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0e845771-934d-41be-9e8c-cfb5992c4970",
+                  "title": "Unauthorized Order History Alteration (TB5)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Order read/write requests issued by Admin Order Management across Trust Boundary 5 are manipulated to alter accounting logs.",
+                  "mitigation": "Implement strict mTLS and immutable audit logging for all admin database operations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": "8.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refund request"
+            ],
+            "id": "49cf0c1e-913b-4b3d-803f-61d86d08795f",
+            "source": {
+              "cell": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+              "port": "e38ed929-891b-4b91-8abc-b06c7ad1a708"
+            },
+            "target": {
+              "cell": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
+              "port": "e38ed929-891b-4b91-8abc-b06c7ad1a708"
+            },
+            "vertices": [
+              {
+                "x": 1310,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refund result",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7724ca8d-39a6-4f7b-a8b0-042f79260d61",
+                  "title": "Spoofed or Manipulated Refund Status Response",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts or tampers with the Refund Result payload returning from Process Payment to Admin Order Management. By altering success flags or transaction IDs, an attacker can force a failed refund to display as successful (or vice versa) on administrative dashboards, causing accounting discrepancies and masking unauthorized financial operations.",
+                  "mitigation": "Digitally sign internal service response payloads using HMAC or mutual TLS (mTLS), validate transaction reference tokens, and log all returned status codes to an immutable audit database.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": "7.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refund result"
+            ],
+            "id": "2c26cc7e-de73-4587-9483-f7138b67f2de",
+            "source": {
+              "cell": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
+              "port": "74497b41-89a1-4f4b-852a-5332893cdc4b"
+            },
+            "target": {
+              "cell": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+              "port": "ea5e181e-f10a-4bdb-bbdf-d9760cf1d3ba"
+            },
+            "vertices": [
+              {
+                "x": 1340,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Read/write orders",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6416f6aa-08be-4355-b811-e80c3fc72bab",
+                  "title": "Unauthorized Order History Alteration (TB5)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Order read/write requests issued by Admin Order Management across Trust Boundary 5 are manipulated to alter accounting logs.",
+                  "mitigation": "Implement strict mTLS and immutable audit logging for all admin database operations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": "8.5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Read/write orders"
+            ],
+            "id": "ebd5be5c-59c9-4d6c-9964-7d306e321dcb",
+            "source": {
+              "cell": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
+              "port": "629c0e2f-b359-46bd-a4bc-7a044bc84a3a"
+            },
+            "target": {
+              "cell": "1ca7cff4-2a89-495e-b8c9-e84582664f86",
+              "port": "507ad649-b929-43c3-8e8d-4b06afcc7e8b"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Admin credentials",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "85e472ee-1e5e-4eaa-b6d9-99cee314b53b",
+                  "title": "Interception of Administrative Login Tokens (TB1/TB4)",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Admin auth tokens sent across Trust Boundary 1/4 are intercepted, granting full administrative access to the platform.",
+                  "mitigation": "Mandate TLS 1.3, HSTS, and access restricted to administrative VPN connections.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": "9.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Admin credentials"
+            ],
+            "id": "5a5f302d-500b-4346-b554-b965bf49c6fb",
+            "source": {
+              "cell": "457f26f1-35b6-47f1-af08-64ccec289a5c",
+              "port": "481d615c-4e6b-4560-8de5-799247b5af13"
+            },
+            "target": {
+              "cell": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
+              "port": "e38ed929-891b-4b91-8abc-b06c7ad1a708"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Account/role information",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d24d424e-cf5f-48ba-b78e-a2f21a5bebb6",
+                  "title": "Interception of Internal Profile Data (TB5)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Internal network eavesdropping captures password hashes and user metadata returning from the database across Trust Boundary 5.",
+                  "mitigation": "Enforce mTLS for all internal database connection traffic.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "7.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Account/role information"
+            ],
+            "id": "46a5e2e3-033f-49f0-8b77-6e8d6ac14fb7",
+            "source": {
+              "cell": "bbdd5f72-bc73-412b-ba69-da9004d3a8eb",
+              "port": "f5de54fc-6821-4bef-8a1f-17956a0d862d"
+            },
+            "target": {
+              "cell": "dd2f0e4e-9f60-4d8b-ab77-aa9802db38d9",
+              "port": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 620
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order Total",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ec54e2f6-d384-49e1-8bdb-f54dacbeb363",
+                  "title": "Price Parameter Manipulation in Transit",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts the HTTP request for the order total and modifies the price parameter value before submitting the payload to the server.",
+                  "mitigation": "Never trust client-side prices; re-calculate item totals on the server and use cryptographic signatures (HMAC) for parameter integrity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "8.0"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Order Total"
+            ],
+            "id": "c0eda4a0-9746-4d69-a484-66dff37fa91f",
+            "source": {
+              "cell": "728bc4e3-e428-4868-9d49-98c4b38d62e6",
+              "port": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+            },
+            "target": {
+              "cell": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+              "port": "74497b41-89a1-4f4b-852a-5332893cdc4b"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 547,
+              "y": 256
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": " Checkout Service"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+                },
+                {
+                  "group": "right",
+                  "id": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "55f4e268-d2cf-4be0-a9c0-c2e22f560006"
+                }
+              ]
+            },
+            "id": "728bc4e3-e428-4868-9d49-98c4b38d62e6",
+            "data": {
+              "type": "tm.Process",
+              "name": " Checkout Service",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "5532e165-d54d-4f26-9358-997def495407",
+                  "title": "Checkout Race Condition & Double-Discounting",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker submits concurrent checkout requests to the Checkout Service, causing a race condition that applies discount codes multiple times or duplicates order fulfillment.",
+                  "mitigation": "Implement atomic database operations, lock cart state during checkout, and enforce unique request idempotency keys.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
+              "x": 577,
+              "y": 434
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Update Inventory"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 12,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+                },
+                {
+                  "group": "right",
+                  "id": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "55f4e268-d2cf-4be0-a9c0-c2e22f560006"
+                }
+              ]
+            },
+            "id": "b417b21b-c192-4ece-b341-7b66413b158c",
+            "data": {
+              "type": "tm.Process",
+              "name": "Update Inventory",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "53277dc5-f89a-4698-b63f-4e7994e70431",
+                  "title": "Inventory Stock Count Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Parallel requests to the Update Inventory process cause stock depletion values to become negative or miscalculated, creating stock allocation errors.",
+                  "mitigation": "Utilize atomic SQL queries with row-level locks on product inventory tables.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "6.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 547,
+              "y": 838
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Product/Inventory DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 13,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f9adc6e4-35e8-4750-adcc-3434222482b4"
+                },
+                {
+                  "group": "right",
+                  "id": "f5de54fc-6821-4bef-8a1f-17956a0d862d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "cddc7b1e-1b2c-47a3-920d-d51ee65277a0"
+                },
+                {
+                  "group": "left",
+                  "id": "2072b1cc-e14a-48c7-82c5-794cb350d632"
+                }
+              ]
+            },
+            "id": "63578ada-0686-4bb1-9934-8eb340dca1ed",
+            "data": {
+              "type": "tm.Store",
+              "name": "Product/Inventory DB",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "38d7724d-d953-41cc-ab20-5b652ad47af3",
+                  "title": "Unencrypted Pricing & Stock Table Alteration",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Unrestricted internal access to the Product/Inventory DB allows unauthorized modification of product prices, discounts, and available stock levels.",
+                  "mitigation": "Restrict database access permissions using least-privilege DB roles and enable read-only access for non-update application modules.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "7.0"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 800.75,
+              "y": 434.00000000000017
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Send Order Confirmation"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 14,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2293e3ac-b4b0-4096-8314-a876f9635d6b"
+                },
+                {
+                  "group": "right",
+                  "id": "d7f75809-cd5a-4c6d-beb0-30222e4cadb3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "db8b7ffd-9041-448f-a456-6b57844e6a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "55f4e268-d2cf-4be0-a9c0-c2e22f560006"
+                }
+              ]
+            },
+            "id": "5c5c1d92-161b-465a-92f1-603287362aa7",
+            "data": {
+              "type": "tm.Process",
+              "name": "Send Order Confirmation",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "349560a3-3e8e-4435-b3d6-154da2042f52",
+                  "title": "Email Worker Denial of Service (DoS)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker generates thousands of rapid dummy order events, overwhelming the Send Order Confirmation process and delaying legitimate customer notification receipts.",
+                  "mitigation": "Decouple confirmation generation into asynchronous message queues (RabbitMQ/SQS) with strict per-user message rates.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "6.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 774.5,
+              "y": 608
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Email Service Provider"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 15,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f4cd78a7-7070-433b-a3d7-90ffa0f6b7cb"
+                },
+                {
+                  "group": "right",
+                  "id": "0658aefd-ce60-4bf5-aeb5-123351ed7b7c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7f2ead96-b354-40ec-b17f-4beab7c53904"
+                },
+                {
+                  "group": "left",
+                  "id": "fe697c78-fac8-4b67-90a7-ff9fd39c6507"
+                }
+              ]
+            },
+            "id": "b400fc14-7c01-41c3-bca0-286a80b7b936",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Email Service Provider",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "fb772265-7c45-4e21-a597-f95ef844412b",
+                  "title": "Email Gateway API Key Hijacking",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker extracts API keys used to connect to the external Email Service Provider, utilizing the platform to dispatch phishing campaigns under the store's domain.",
+                  "mitigation": "Restrict API key permissions by server IP, configure SPF/DKIM/DMARC records, and rotate API keys regularly.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "7.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1050,
+              "y": 256
+            },
+            "size": {
+              "width": 110,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Process payment"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 16,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e38ed929-891b-4b91-8abc-b06c7ad1a708"
+                },
+                {
+                  "group": "right",
+                  "id": "ea5e181e-f10a-4bdb-bbdf-d9760cf1d3ba"
+                },
+                {
+                  "group": "bottom",
+                  "id": "629c0e2f-b359-46bd-a4bc-7a044bc84a3a"
+                },
+                {
+                  "group": "left",
+                  "id": "74497b41-89a1-4f4b-852a-5332893cdc4b"
+                }
+              ]
+            },
+            "id": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
+            "data": {
+              "type": "tm.Process",
+              "name": "Process payment",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "e68c807e-b12f-4f65-b77a-21f857d65bc6",
+                  "title": "Client-Side Payment Verification Bypass",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An attacker tampers with the payment processing pipeline to simulate a successful payment transaction without charging a valid funding source.",
+                  "mitigation": "Perform all payment confirmation checks server-side using direct API callbacks from the payment processor.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "9.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1048.75,
+              "y": 608
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Payment Gateway"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 17,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f149d24d-b1b4-4feb-965f-8e211cd257cf"
+                },
+                {
+                  "group": "right",
+                  "id": "8dd64592-3c62-4d10-82e9-24f9c083cf3d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "481d615c-4e6b-4560-8de5-799247b5af13"
+                },
+                {
+                  "group": "left",
+                  "id": "d1d847a4-b72c-4c8e-9ea1-7c47aec491d4"
+                }
+              ]
+            },
+            "id": "474b60b8-45ca-4258-bd22-e6e6b3b9fb26",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Payment Gateway",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "bc5bbb47-0daa-463b-b957-e17b30c0c50e",
+                  "title": "Third-Party Payment Gateway Callback Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker spoofs incoming webhook responses from the external Payment Gateway to fake transaction approvals and process unauthorized orders.",
+                  "mitigation": "Validate cryptographic HMAC signatures on all payment webhooks and mandate TLS 1.3 with mutual authentication (mTLS).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1494,
+              "y": 256
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Admin Order Management"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 18,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e38ed929-891b-4b91-8abc-b06c7ad1a708"
+                },
+                {
+                  "group": "right",
+                  "id": "ea5e181e-f10a-4bdb-bbdf-d9760cf1d3ba"
+                },
+                {
+                  "group": "bottom",
+                  "id": "629c0e2f-b359-46bd-a4bc-7a044bc84a3a"
+                },
+                {
+                  "group": "left",
+                  "id": "74497b41-89a1-4f4b-852a-5332893cdc4b"
+                }
+              ]
+            },
+            "id": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
+            "data": {
+              "type": "tm.Process",
+              "name": "Admin Order Management",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "5273d25a-166d-4ebf-b58f-07278ff14e5d",
+                  "title": "Unauthorized Administrative Action Execution",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Broken access controls in the Admin Order Management process allow standard users to execute administrative endpoints such as approving manual refunds.",
+                  "mitigation": "Enforce strict server-side Role-Based Access Control (RBAC) checks on every administrative routing endpoint.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1464,
+              "y": 838
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Orders DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 19,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "507ad649-b929-43c3-8e8d-4b06afcc7e8b"
+                },
+                {
+                  "group": "right",
+                  "id": "7a237f21-b82a-4cf0-91fe-c7a7ef1769e3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "8a414c0e-a1ff-4ec1-938e-4d3e0208da69"
+                },
+                {
+                  "group": "left",
+                  "id": "11421a1b-6f97-4774-8e73-0be75d08f7c7"
+                }
+              ]
+            },
+            "id": "1ca7cff4-2a89-495e-b8c9-e84582664f86",
+            "data": {
+              "type": "tm.Store",
+              "name": "Orders DB",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "c2bf5946-bb4c-45c4-936b-57f1d4fa7fe4",
+                  "title": "Order History Breach & Financial Record Leakage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Historical customer purchase data and billing details stored in the Orders DB are exposed during an unauthorized database export or backup leak.",
+                  "mitigation": "Apply AES-256 storage encryption at rest, restrict DB backup access to authorized IAM roles, and enable immutable audit logs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1467.75,
+              "y": 75.00000000000038
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Admin"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 21,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f149d24d-b1b4-4feb-965f-8e211cd257cf"
+                },
+                {
+                  "group": "right",
+                  "id": "8dd64592-3c62-4d10-82e9-24f9c083cf3d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "481d615c-4e6b-4560-8de5-799247b5af13"
+                },
+                {
+                  "group": "left",
+                  "id": "d1d847a4-b72c-4c8e-9ea1-7c47aec491d4"
+                }
+              ]
+            },
+            "id": "457f26f1-35b6-47f1-af08-64ccec289a5c",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Admin",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "b4c3263c-ced0-49a2-949d-7e77b377e0a7",
+                  "title": "Privilege Abuse via Hijacked Admin Identity",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "An attacker steals administrative session tokens or credentials to access the Admin actor role, issuing unauthorized refunds and modifying store records.",
+                  "mitigation": "Require FIDO2/WebAuthn hardware tokens for Admin accounts, enforce IP whitelisting, and set aggressive session timeouts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "9.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 4\nCustomer Role <-> Admin Role",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 4\nCustomer Role <-> Admin Role"
+            ],
+            "id": "c50bf314-55b2-4f18-baf1-d38826997aa5",
+            "source": {
+              "x": 50,
+              "y": 40
+            },
+            "target": {
+              "x": 1690,
+              "y": 40
+            }
+          }
+        ],
+        "description": "Data Flow Diagram for the CartCo e-commerce checkout system, including trust boundaries and data flows."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Mr. Ahdzleebee L. Formentera",
+    "threatTop": 37
+  }
+}
